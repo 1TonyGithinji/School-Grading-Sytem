@@ -8,14 +8,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #0084b4;font-size: 15px; text-align: center;">
+<body style="background-color: #0084b4; text-align: center;">
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.php"><b>School Grading System</b></a>
+      <a class="navbar-brand" href="#"><b>School Grading System</b></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="index.php">Home</a></li>
+      <li class="active"><a href="#">Home</a></li>
       <li><a href="motto.html">Motto</a></li>
       <li><a href="mission.html">Mission</a></li>
       <li><a href="vision.html">Vision</a></li>
@@ -23,11 +23,9 @@
   </div>
 </nav>
 	<h1>Grading System</h1>
-	<div class="container-fluid">
-		<div class="row">
-	<div class="col-sm-4" style="background-color:lavender;"><h6>Maths</h6>
+	<div class="container">
 	<form method="GET">
-		<input type="number" name="grade">
+		<span style="color: red">Maths:</span><br><input type="number" name="grade">
 		<button>Grade</button>
 	</form>
 	<?php 
@@ -51,10 +49,10 @@
 			echo "Input a Figure between 0-100.";
 		}
 		}
-	 ?></div>
-    <div class="col-sm-4" style="background-color:lavenderblush;"><h6>English</h6>
+	 ?>
+	 
 	<form method="GET">
-		<input type="number" name="english">
+		<span style="color: red">English:</span><br><input type="number" name="english">
 		<button>Grade</button>
 	</form>
 	<?php 
@@ -78,10 +76,10 @@
 			echo "Input a Figure between 0-100.";
 		}
 		}
-	 ?></div>
-    <div class="col-sm-4" style="background-color:lavender;"><h6>Physics</h6>
+	 ?>
+	
 	<form method="GET">
-		<input type="number" name="physics">
+		<span style="color: red">Physics:</span><br><input type="number" name="physics">
 		<button>Grade</button>
 	</form>
 	<?php 
@@ -105,13 +103,10 @@
 			echo "Input a Figure between 0-100.";
 		}
 		}
-	 ?></div>
-		</div>
-	<div class="container-fluid">
-		<div class="row">
-	<div class="col-sm-4" style="background-color:lavender;"><h6>Kiswahili</h6>
+	 ?>
+
 	<form method="GET">
-		<input type="number" name="kiswahili">
+		<span style="color: red">Kiswahili:</span><br><input type="number" name="kiswahili">
 		<button>Grade</button>
 	</form>
 	<?php 
@@ -135,10 +130,64 @@
 			echo "Input a Figure between 0-100.";
 		}
 		}
-	 ?></div>
-    <div class="col-sm-4" style="background-color:lavenderblush;"><h6>Social Studies</h6>
+	 ?>
+	 
 	<form method="GET">
-		<input type="number" name="socialstudies">
+		<span style="color: red">Biology:</span><br><input type="number" name="biology">
+		<button>Grade</button>
+	</form>
+	<?php 
+		if (isset($_GET['biology'])){
+			$marks=$_GET['biology'];
+		if ($marks>=0 && $marks<=20) {
+			echo "FAIL";
+		}
+		elseif ($marks>20 && $marks<=40) {
+			echo "D";
+		}
+		elseif ($marks>40 && $marks<=60) {
+			echo "C";
+		}
+		elseif ($marks>60 && $marks<=80) {
+			echo "B";
+		}
+		elseif ($marks>80 && $marks<=100) {
+			echo "A";
+		}else {
+			echo "Input a Figure between 0-100.";
+		}
+		}
+	 ?>
+	 
+	<form method="GET">
+		<span style="color: red">Chemistry:</span><br><input type="number" name="chemistry">
+		<button>Grade</button>
+	</form>
+	<?php 
+		if (isset($_GET['chemistry'])){
+			$marks=$_GET['chemistry'];
+		if ($marks>=0 && $marks<=20) {
+			echo "FAIL";
+		}
+		elseif ($marks>20 && $marks<=40) {
+			echo "D";
+		}
+		elseif ($marks>40 && $marks<=60) {
+			echo "C";
+		}
+		elseif ($marks>60 && $marks<=80) {
+			echo "B";
+		}
+		elseif ($marks>80 && $marks<=100) {
+			echo "A";
+		}else {
+			echo "Input a Figure between 0-100.";
+		}
+		}
+	 ?>
+
+	<form method="GET">
+		<span style="color: red">Social Studies:</span><br><input type="number" name="socialstudies">
 		<button>Grade</button>
 	</form>
 	<?php 
@@ -163,118 +212,6 @@
 		}
 		}
 	 ?></div>
-    <div class="col-sm-4" style="background-color:lavender;"><h6>Biology</h6>
-	<form method="GET">
-		<input type="number" name="biology">
-		<button>Grade</button>
-	</form>
-	<?php 
-		if (isset($_GET['biology'])){
-			$marks=$_GET['biology'];
-		if ($marks>=0 && $marks<=20) {
-			echo "FAIL";
-		}
-		elseif ($marks>20 && $marks<=40) {
-			echo "D";
-		}
-		elseif ($marks>40 && $marks<=60) {
-			echo "C";
-		}
-		elseif ($marks>60 && $marks<=80) {
-			echo "B";
-		}
-		elseif ($marks>80 && $marks<=100) {
-			echo "A";
-		}else {
-			echo "Input a Figure between 0-100.";
-		}
-		}
-	 ?></div>
-		</div>
-	<div class="container-fluid">
-		<div class="row">
-	<div class="col-sm-4" style="background-color:lavender;"><h6>Chemistry</h6>
-	<form method="GET">
-		<input type="number" name="chemistry">
-		<button>Grade</button>
-	</form>
-	<?php 
-		if (isset($_GET['chemistry'])){
-			$marks=$_GET['chemistry'];
-		if ($marks>=0 && $marks<=20) {
-			echo "FAIL";
-		}
-		elseif ($marks>20 && $marks<=40) {
-			echo "D";
-		}
-		elseif ($marks>40 && $marks<=60) {
-			echo "C";
-		}
-		elseif ($marks>60 && $marks<=80) {
-			echo "B";
-		}
-		elseif ($marks>80 && $marks<=100) {
-			echo "A";
-		}else {
-			echo "Input a Figure between 0-100.";
-		}
-		}
-	 ?></div>
-    <div class="col-sm-4" style="background-color:lavenderblush;"><h6>Geography</h6>
-	<form method="GET">
-		<input type="number" name="Geography">
-		<button>Grade</button>
-	</form>
-	<?php 
-		if (isset($_GET['Geography'])){
-			$marks=$_GET['Geography'];
-		if ($marks>=0 && $marks<=20) {
-			echo "FAIL";
-		}
-		elseif ($marks>20 && $marks<=40) {
-			echo "D";
-		}
-		elseif ($marks>40 && $marks<=60) {
-			echo "C";
-		}
-		elseif ($marks>60 && $marks<=80) {
-			echo "B";
-		}
-		elseif ($marks>80 && $marks<=100) {
-			echo "A";
-		}else {
-			echo "Input a Figure between 0-100.";
-		}
-		}
-	 ?></div>
-    <div class="col-sm-4" style="background-color:lavender;"><h6>History</h6>
-	<form method="GET">
-		<input type="number" name="History">
-		<button>Grade</button>
-	</form>
-	<?php 
-		if (isset($_GET['History'])){
-			$marks=$_GET['History'];
-		if ($marks>=0 && $marks<=20) {
-			echo "FAIL";
-		}
-		elseif ($marks>20 && $marks<=40) {
-			echo "D";
-		}
-		elseif ($marks>40 && $marks<=60) {
-			echo "C";
-		}
-		elseif ($marks>60 && $marks<=80) {
-			echo "B";
-		}
-		elseif ($marks>80 && $marks<=100) {
-			echo "A";
-		}else {
-			echo "Input a Figure between 0-100.";
-		}
-		}
-	 ?></div>
-		</div>
 	 <footer style="text-align: center;">Copyright 2018<br>Coding School</footer>
 </body>
 </html>
